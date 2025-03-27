@@ -1,8 +1,9 @@
 @font-face {
-    font-family: contraxt;
-    src: url('./assets/fonts/conthrax-heavy.otf') format('otf');
+    font-family: "conthrax";
+    src: local("conthrax"), url('./assets/fonts/conthrax-heavy.otf') format('opentype');
 }
 
 .contraxt {
-    font-family: contraxt;
+    font-family: conthrax;
+
 }

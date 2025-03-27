@@ -13,7 +13,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        contraxt: ["contraxt"],
+        contraxt: ["conthrax"],
       },
     },
   },

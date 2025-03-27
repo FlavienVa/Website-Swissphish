@@ -1,13 +1,12 @@
 import React from "react";
 import Navbar from "../../components/Navbar"; // Your existing navbar component
 import Footer from "../../components/Footer"; // Your existing navbar component
-
 const HeroSection = () => {
   return (
     <section className="max-w-full text-white py-20">
       <div className="container max-w-full mx-auto flex flex-col md:flex-row items-center">
         {/* Left content */}
-        <div className="md:w-1/2 mb-10 md:mb-0">
+        <div className="md:w-1/2 mb-10 md:mb-0"> {/*md == medium display i.e comment le site interprete un élément en fonction de sa taille*/}
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             The leader of phishing
           </h1>
