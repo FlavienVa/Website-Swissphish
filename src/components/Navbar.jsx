@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="max-w-full bg-[#1A1A1A] p-4 sticky top-0 left-0 right-0">
       <div className="w-full px-4 flex justify-between items-center">
         {/* Logo/Brand */}
-        <div className="text-[#5DE562] font-bold text-xl font-contraxt">
+        <div className="text-[#5DE562] font-bold text-xl font-conthrax">
           SwissPhish
         </div>
 

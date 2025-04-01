@@ -6,14 +6,14 @@ export default {
     container: {
       center: true,
       padding: {
-        DEFAULT: '0',
-        sm: '2rem',
-        lg: '3rem',
+        DEFAULT: "0",
+        sm: "2rem",
+        lg: "3rem",
       },
     },
     extend: {
       fontFamily: {
-        contraxt: ["conthrax"],
+        conthrax: ["conthrax"],
       },
     },
   },
