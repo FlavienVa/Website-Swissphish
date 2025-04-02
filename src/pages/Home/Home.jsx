@@ -2,31 +2,35 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar"; // Your existing navbar component
 import Footer from "../../components/Footer"; // Your existing navbar component
 import ReactGA from "react-ga4";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import flav_avatart from "../../assets/img/avatar_flavien.png";
+import hero_img from "../../assets/img/hero_img.png";
 
 const HeroSection = () => {
   return (
-    <section className="max-w-full text-white py-20">
+    <section className="max-w-full text-white py-40 px-20">
       <div className="container max-w-full mx-auto flex flex-col md:flex-row items-center">
         {/* Left content */}
         <div className="md:w-1/2 mb-10 md:mb-0">
           {" "}
           {/*md == medium display i.e comment le site interprete un élément en fonction de sa taille*/}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            The leader of phishing
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 hammersmith">
+            Your solution against phishing
           </h1>
-          <p className="text-lg mb-8">
-            Test your company with our solution. Responsive and trackable. You
-            will be amazed and everything will be easier.
+          <p className="text-lg mb-8 hammersmith">
+            Measure your organization's phishing resilience with realistic
+            simulations and detailed analytics.
           </p>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-            Request a quote
+          <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
+            <span>Request a quote</span>
+            <ArrowRightIcon className="h-5 w-5" />
           </button>
         </div>
 
-        {/* Right image */}
-        <div className="md:w-1/2">
+        {/* Right image positioned to the right */}
+        <div className="md:ml-auto md:w-1/3">
           <img
-            src="/hacker-image.png"
+            src={hero_img}
             alt="Cybersecurity illustration"
             className="rounded-lg w-full"
           />
@@ -93,7 +97,7 @@ const AboutUsSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-10 md:space-y-0 md:space-x-16">
           {/* Team Member 1 */}
           <div className="flex flex-col items-center max-w-xs">
-            <div className="w-32 h-32 bg-gray-300 rounded-full mb-6"></div>
+            <div className="w-36 h-36 bg-gray-300 rounded-full mb-6"></div>
             <div className="text-center">
               <p className="text-lg mb-4">
                 Mini description justin mini description justin mini description
@@ -105,12 +109,20 @@ const AboutUsSection = () => {
 
           {/* Team Member 2 */}
           <div className="flex flex-col items-center max-w-xs">
-            <div className="w-32 h-32 bg-gray-300 rounded-full mb-6"></div>
+            <div className="w-36 h-36 rounded-full mb-6 overflow-hidden">
+              <img
+                src={flav_avatart}
+                alt="avatar_flavien"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div className="text-center">
               <p className="text-lg mb-4">
-                Mini description Flavien mini description Flavien mini
-                description justin mini description Flavien mini description
-                Flavien mini description justin
+                Hi, my name is Flavien. I am in my last year of bachelor at EPFL
+                and I am trying to make my own contribution in the world. I love
+                cybersecurity and web development. This project is what I value
+                the most and I will work tirelessly to make it better, day by
+                day.
               </p>
             </div>
           </div>
@@ -126,7 +138,7 @@ function HomePage() {
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
   }, []);
   return (
-    <div className="min-h-screen bg-[linear-gradient(132deg,#000000_0%,#4e544e_86%)]">
+    <div className="min-h-screen bg-[radial-gradient(circle,rgba(78,84,78,1)_0%,rgba(0,0,0,1)_94%)]">
       <Navbar />
       <HeroSection />
       <div className=" w-4/5 border-t-4 border-white mx-auto"></div>{" "}

@@ -3,7 +3,15 @@
     src: local("conthrax"), url('./assets/fonts/conthrax-heavy.otf') format('opentype');
 }
 
+@font-face {
+    font-family: hammersmith;
+    src: local("hammersmith"), url('./assets/fonts/HammersmithOne-Regular.ttf') format('truetype');
+}
+
 .contraxt {
     font-family: conthrax;
+}
 
+.hammersmith {
+    font-family: hammersmith;
 }
