@@ -4,6 +4,7 @@ import Footer from "../../components/Footer"; // Your existing navbar component
 import ReactGA from "react-ga4";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import flav_avatart from "../../assets/img/avatar_flavien.png";
+import ju_avatar from "../../assets/img/avatar_justin.jpg";
 import hero_img from "../../assets/img/hero_img.png";
 
 const HeroSection = () => {
@@ -97,12 +98,19 @@ const AboutUsSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-10 md:space-y-0 md:space-x-16">
           {/* Team Member 1 */}
           <div className="flex flex-col items-center max-w-xs">
-            <div className="w-36 h-36 bg-gray-300 rounded-full mb-6"></div>
+            <div className="w-36 h-36 bg-gray-300 rounded-full mb-6 overflow-hidden">
+              <img
+                src={ju_avatar}
+                alt="avatar of Justin"
+                className="w-full h-full object-cover">
+              </img>
+            </div>
             <div className="text-center">
               <p className="text-lg mb-4">
-                Mini description justin mini description justin mini description
-                justin mini description justin mini description justin mini
-                description justin
+                Hello, my name is Justin. I'm currently in my 3rd year of bachelor at EPFL and
+                my goal through this project is to become the best cyber-expert ever. For this,
+                I'm willing to push beyond my capacities and thrive to make the world a little safer.
+                This is the project of a lifetime.
               </p>
             </div>
           </div>
@@ -151,5 +159,4 @@ function HomePage() {
     </div>
   );
 }
-
 export default HomePage;
