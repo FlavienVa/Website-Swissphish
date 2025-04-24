@@ -1,6 +1,12 @@
 import React from "react";
-
+import {useTranslation} from "react-i18next";
 function Footer() {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); // Change the language dynamically
+    localStorage.setItem("language", lng); //saves the selected language in localStorage
+  };
   return (
     <footer className="bg-[#1A1A1A] text-white py-8 px-4 border-t border-gray-800">
       <div className="bg-white height-1"></div>
@@ -17,11 +23,17 @@ function Footer() {
 
         {/* Language Selector */}
         <div className="flex items-center space-x-4 mb-6 md:mb-0">
-          <span>Fr</span>
+          <button
+          onClick = {() => changeLanguage("fr")}
+          >
+            Fr
+          </button>
           <span>|</span>
-          <a href="#" className="text-green-500 hover:underline">
+          <button onClick={() => changeLanguage("en")}
+           //className="text-green-500 hover:underline"
+           >
             En
-          </a>
+          </button>
         </div>
 
         {/* Social Media Button */}

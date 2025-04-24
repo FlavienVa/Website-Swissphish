@@ -2,12 +2,15 @@ import React, { useEffect } from "react";
 import Navbar from "../../components/Navbar"; // Your existing navbar component
 import Footer from "../../components/Footer"; // Your existing navbar component
 import ReactGA from "react-ga4";
+import { Trans, useTranslation } from "react-i18next";
+import "../../i18n";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import flav_avatart from "../../assets/img/avatar_flavien.png";
 import ju_avatar from "../../assets/img/avatar_justin.jpg";
 import hero_img from "../../assets/img/hero_img.png";
 
 const HeroSection = () => {
+  const {t} = useTranslation();
   return (
     <section className="max-w-full text-white py-40 px-20">
       <div className="container max-w-full mx-auto flex flex-col md:flex-row items-center">
@@ -16,14 +19,13 @@ const HeroSection = () => {
           {" "}
           {/*md == medium display i.e comment le site interprete un élément en fonction de sa taille*/}
           <h1 className="text-4xl md:text-5xl font-bold mb-4 hammersmith">
-            Your solution against phishing
+            {t("hero.title")}
           </h1>
           <p className="text-lg mb-8 hammersmith">
-            Measure your organization's phishing resilience with realistic
-            simulations and detailed analytics.
+          {t("hero.description")}
           </p>
           <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg">
-            <span>Request a quote</span>
+            <span>{t("hero.button")}</span>
             <ArrowRightIcon className="h-5 w-5" />
           </button>
         </div>
@@ -42,21 +44,19 @@ const HeroSection = () => {
 };
 
 const PhishingInfoSection = () => {
+  const {t} = useTranslation();
   return (
     <section className=" text-white py-20">
       <div className="container mx-auto  max-w-full">
         <h2 className="text-3xl md:text-4xl font-bold mb-5 text-center">
-          What is phishing email
+         {t("phishingInfo.title")}
         </h2>
         <p className="text-lg mb-4">
-          Phishing is a form of cybercrime in which criminals try to obtain
-          sensitive information from you by sending you emails with{" "}
-          <span className="text-green-500">fraudulent links</span>, asking you
-          to fill in a form with your personal details.
+          <Trans i18nKey="phishingInfo.description1"
+          components ={{span: <span className="text-green-500" />}}/>
         </p>
         <p className="text-lg">
-          It is one of the most common attacks, is easy to carry out and can
-          have a huge impact on individuals and businesses.
+          {t("phishingInfo.description2")}
         </p>
       </div>
     </section>
@@ -64,22 +64,19 @@ const PhishingInfoSection = () => {
 };
 
 const WhatWeDoSection = () => {
+  const {t} = useTranslation();
   return (
     <section className=" text-white py-20">
       <div className="container mx-auto  max-w-full">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-          What do we do
+          {t("whatWeDo.title")}
         </h2>
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-lg mb-6">
-            We provide comprehensive phishing simulation and training solutions
-            to help organizations identify vulnerabilities, educate employees,
-            and strengthen their security posture against email-based threats.
+            {t("whatWeDo.description1")}
           </p>
           <p className="text-lg">
-            Our platform allows you to run realistic phishing simulations, track
-            employee responses, and deliver targeted training to those who need
-            it most, all while providing detailed analytics and reporting.
+            {t("whatWeDo.description2")}
           </p>
         </div>
       </div>
@@ -88,11 +85,12 @@ const WhatWeDoSection = () => {
 };
 
 const AboutUsSection = () => {
+  const {t} = useTranslation();
   return (
     <section className=" text-white py-20">
       <div className="container mx-auto  max-w-full">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About us
+          {t("aboutUs.title")}
         </h2>
 
         <div className="flex flex-col md:flex-row justify-center items-center md:items-start space-y-10 md:space-y-0 md:space-x-16">
@@ -107,10 +105,7 @@ const AboutUsSection = () => {
             </div>
             <div className="text-center">
               <p className="text-lg mb-4">
-                Hello, my name is Justin. I'm currently in my 3rd year of bachelor at EPFL and
-                my goal through this project is to become the best cyber-expert ever. For this,
-                I'm willing to push beyond my capacities and thrive to make the world a little safer.
-                This is the project of a lifetime.
+                {t("aboutUs.justin")}
               </p>
             </div>
           </div>
@@ -126,11 +121,7 @@ const AboutUsSection = () => {
             </div>
             <div className="text-center">
               <p className="text-lg mb-4">
-                Hi, my name is Flavien. I am in my last year of bachelor at EPFL
-                and I am trying to make my own contribution in the world. I love
-                cybersecurity and web development. This project is what I value
-                the most and I will work tirelessly to make it better, day by
-                day.
+                {t("aboutUs.flavien")}
               </p>
             </div>
           </div>
